@@ -29,15 +29,15 @@ module.exports = function validateRegisterInput(data) {
 
   // Password validation
   if (Validator.isEmpty(data.password)) {
-    errors.password = "Поле пароля обов'язкове";
+    errors.password = "Поле паролю обов'язкове";
   }
 
   if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
-    errors.password = "Довжина пароля має бути від 6 до 30 символів";
+    errors.password = "Довжина паролю має бути від 6 до 30 символів";
   }
 
   if (Validator.isEmpty(data.password2)) {
-    errors.password2 = "Поле підтвердження пароля обов'язкове";
+    errors.password2 = "Поле підтвердження паролю обов'язкове";
   }
 
   if (!Validator.equals(data.password, data.password2)) {
